@@ -2,7 +2,7 @@
 
 class Users extends CI_Controller {
 
-	function validate_users() {
+	function validate_user() {
 		$this->load->model('users_model');
 
 		$username = $this->input->post('username');
@@ -16,6 +16,16 @@ class Users extends CI_Controller {
 			$data['main_content'] = 'home_view';
 			$this->load->view('include/template', $data);
 		}
+
+	}
+
+/*
+	|--------------------------------------------------------------------------
+	| INCOMPLETE
+	|--------------------------------------------------------------------------
+	*/
+	function register_user() {
+		$this->load->model('users_model');
 
 	}
 }

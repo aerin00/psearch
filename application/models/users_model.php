@@ -1,6 +1,11 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Users_model extends CI_Model {
+	/*
+	|--------------------------------------------------------------------------
+	| Validate User
+	|--------------------------------------------------------------------------
+	*/
 	function validate($username, $pw) {
 
 		$where_array = array( 'username' => $username, 'pw' => $pw );
@@ -13,6 +18,16 @@ class Users_model extends CI_Model {
 		else {
 			return FALSE;
 		}
+	}
+
+	/*
+	|--------------------------------------------------------------------------
+	| INCOMPLETE Register User
+	|--------------------------------------------------------------------------
+	*/
+	function register() {
+		$username = $this->input->post('username');
+		$password = $this->input->post('pw');
 	}
 }
 
